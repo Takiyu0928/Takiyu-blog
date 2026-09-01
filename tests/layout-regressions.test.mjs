@@ -1,0 +1,108 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import { describe, it } from "node:test";
+
+const layoutSource = await readFile(
+	new URL("../src/layouts/Layout.astro", import.meta.url),
+	"utf8",
+);
+const bannerStyles = await readFile(
+	new URL("../src/styles/banner.css", import.meta.url),
+	"utf8",
+);
+const mainStyles = await readFile(
+	new URL("../src/styles/main.css", import.meta.url),
+	"utf8",
+);
+const markdownSource = await readFile(
+	new URL("../src/components/misc/Markdown.astro", import.meta.url),
+	"utf8",
+);
+const encryptorSource = await readFile(
+	new URL("../src/components/features/auth/Encryptor.astro", import.meta.url),
+	"utf8",
+);
+const globalStyleCheckSource = await readFile(
+	new URL("../scripts/check-global-style-loading.mjs", import.meta.url),
+	"utf8",
+);
+const packageConfig = JSON.parse(
+	await readFile(new URL("../package.json", import.meta.url), "utf8"),
+);
+
+describe("Global style loading regressions", () => {
+	it("loads shared styles from the root layout and verifies the build output", () => {
+		for (const stylesheet of [
+			"variables.styl",
+			"banner.css",
+			"transition.css",
+			"widget-responsive.css",
+		]) {
+			assert.ok(
+				layoutSource.includes(`import "../styles/${stylesheet}";`),
+				`${stylesheet} must be an explicit root layout dependency`,
+			);
+		}
+
+		assert.doesNotMatch(
+			mainStyles,
+			/@import\s+["']\.\/(?:banner|transition)\.css/,
+		);
+		assert.match(
+			packageConfig.scripts.build,
+			/node scripts\/check-global-style-loading\.mjs/,
+		);
+	});
+
+	it("loads Markdown styles from the Markdown wrapper", () => {
+		for (const stylesheet of ["markdown.css", "markdown-extend.styl"]) {
+			assert.ok(
+				markdownSource.includes(`import "@/styles/${stylesheet}";`),
+				`${stylesheet} must follow every rendered Markdown surface`,
+			);
+			assert.ok(
+				!encryptorSource.includes(`import "@/styles/${stylesheet}";`),
+				`${stylesheet} must not depend on the optional encryption wrapper`,
+			);
+		}
+
+		assert.ok(
+			encryptorSource.includes('import "@/styles/encrypted-content.css";'),
+			"encrypted content styles must remain owned by the encryption wrapper",
+		);
+		assert.ok(
+			!encryptorSource.includes('import "@/styles/expressive-code.css";'),
+			"global Expressive Code styles must not be duplicated by encryption",
+		);
+		assert.match(globalStyleCheckSource, /about\/index\.html/);
+		assert.match(globalStyleCheckSource, /\.card-github/);
+		assert.match(globalStyleCheckSource, /\.custom-md \.image-grid/);
+	});
+});
+
+describe("Fullscreen banner layout regressions", () => {
+	it("does not apply the standard banner sticky compensation in fullscreen", () => {
+		assert.match(
+			bannerStyles,
+			/body\.enable-banner\.fullscreen-banner #main-grid\s*\{[^}]*transform:\s*translateY\(0\)/s,
+			"fullscreen must continue to remove the banner extension transform",
+		);
+
+		for (const stickyId of [
+			"sidebar-sticky",
+			"left-sidebar-sticky",
+			"right-sidebar-sticky",
+		]) {
+			assert.ok(
+				layoutSource.includes(
+					`.enable-banner:not(.fullscreen-banner) #${stickyId}`,
+				),
+				`${stickyId} must exclude fullscreen from the banner offset compensation`,
+			);
+			assert.ok(
+				!layoutSource.includes(`.enable-banner #${stickyId}`),
+				`${stickyId} must not use the unscoped banner offset compensation`,
+			);
+		}
+	});
+});
