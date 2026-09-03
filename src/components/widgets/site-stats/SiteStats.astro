@@ -61,16 +61,20 @@ function formatNumber(num: number): string {
 	return num.toLocaleString();
 }
 
-// 获取最新文章日期（忽略置顶状态，只按发布日期排序）
+// 获取最新文章活动日期：优先使用更新时间，没有更新时间时使用发布日期
 const latestPost = posts.reduce((latest, post) => {
 	if (!latest) {
 		return post;
 	}
-	return post.data.published > latest.data.published ? post : latest;
+
+	const postActivityDate = post.data.updated ?? post.data.published;
+	const latestActivityDate = latest.data.updated ?? latest.data.published;
+
+	return postActivityDate > latestActivityDate ? post : latest;
 }, posts[0]);
 
 const lastPostDate = latestPost
-	? latestPost.data.published.toISOString()
+	? (latestPost.data.updated ?? latestPost.data.published).toISOString()
 	: null;
 
 const stats = [
