@@ -75,7 +75,6 @@ export const siteConfig: SiteConfig = {
 				"/assets/desktop-banner/p8.png",
 			],
 			mobile: [
-				"/assets/mobile-banner/p11.png",
 				"assets/mobile-banner/senjogahala.png",
 			],
 		},
