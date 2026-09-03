@@ -78,6 +78,7 @@ export const siteConfig: SiteConfig = {
 				"/assets/mobile-banner/1788418737181-6.png",
 				"/assets/mobile-banner/1788418746774-7.jpg",
 				"/assets/mobile-banner/1788418756273-8.jpg",
+				"/assets/mobile-banner/1788418928093-11.png",
 			],
 		},
 		position: "top",
