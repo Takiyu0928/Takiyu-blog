@@ -70,6 +70,7 @@ export const siteConfig: SiteConfig = {
 		src: {
 			desktop: [
 				"/assets/desktop-banner/1788419164683-1.jpg",
+				"/assets/desktop-banner/1788419175198-2.jpg",
 			],
 			mobile: [
 				"/assets/mobile-banner/1788418737181-6.png",
