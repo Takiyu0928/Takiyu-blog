@@ -68,7 +68,9 @@ export const siteConfig: SiteConfig = {
 	},
 	banner: {
 		src: {
-			desktop: [],
+			desktop: [
+				"/assets/desktop-banner/1788419164683-1.jpg",
+			],
 			mobile: [
 				"/assets/mobile-banner/1788418737181-6.png",
 				"/assets/mobile-banner/1788418746774-7.jpg",
