@@ -4,7 +4,21 @@
 
 > 在线访问：<https://takiyu-wiki.ccwu.cc/>
 
-![Takiyu Blog 横幅](./public/assets/desktop-banner/p5.png)
+## 界面预览
+
+### 桌面端
+
+![Takiyu Blog 桌面端首页：秋日旅行横幅](./docs/readme/desktop-home-autumn.png)
+
+![Takiyu Blog 桌面端首页：夜晚横幅](./docs/readme/desktop-home-night.png)
+
+### 移动端
+
+<p align="center">
+  <img src="./docs/readme/mobile-home.jpg" width="42%" alt="Takiyu Blog 移动端首页" />
+  &nbsp;&nbsp;
+  <img src="./docs/readme/mobile-music-player.jpg" width="42%" alt="Takiyu Blog 移动端音乐播放器" />
+</p>
 
 ## 项目简介
 
