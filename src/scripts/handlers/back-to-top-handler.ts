@@ -130,17 +130,37 @@ export class BackToTopHandler {
 	 * 更新返回顶部按钮可见性
 	 */
 	private updateBackToTopButton(scrollTop: number, threshold: number): void {
+		const shouldBeVisible = scrollTop > threshold;
+		this.updateBackToHomeButton(shouldBeVisible);
+
 		if (!this.backToTopBtn) {
 			return;
 		}
 
-		const shouldBeVisible = scrollTop > threshold;
 		if (shouldBeVisible === this.backToTopVisible) {
 			return;
 		}
 
 		this.backToTopVisible = shouldBeVisible;
 		this.backToTopBtn.classList.toggle("hide", !shouldBeVisible);
+	}
+
+	/**
+	 * 主页按钮与返回顶部按钮共用同一个悬浮位置：
+	 * 非主页位于页面顶部时显示主页按钮，下滑后改为返回顶部按钮。
+	 */
+	private updateBackToHomeButton(backToTopVisible: boolean): void {
+		const backToHomeBtn = document.getElementById("back-to-home-btn");
+		if (!backToHomeBtn) {
+			return;
+		}
+
+		const path = window.location.pathname.replace(/\/$/, "") || "/";
+		const isHomePage = path === "/";
+		backToHomeBtn.classList.toggle(
+			"hide",
+			isHomePage || backToTopVisible,
+		);
 	}
 
 	/**

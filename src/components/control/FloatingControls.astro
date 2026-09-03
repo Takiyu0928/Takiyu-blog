@@ -5,6 +5,7 @@ import { musicPlayerConfig, siteConfig } from "../../config";
 import FloatingTOC from "../features/toc/FloatingTOC.astro";
 import BackToHome from "./BackToHome.astro";
 import BackToTop from "./BackToTop.astro";
+import LanguageFabButton from "./LanguageFabButton.svelte";
 import MusicFabButton from "./MusicFabButton.svelte";
 
 interface Props {
@@ -15,6 +16,9 @@ const { headings = [] } = Astro.props;
 ---
 
 <div class="floating-controls-container">
+	<div class="floating-control-item" data-control-key="language">
+		<LanguageFabButton client:load />
+	</div>
 	{
 		musicPlayerConfig.enable &&
 			musicPlayerConfig.showFloatingPlayer &&

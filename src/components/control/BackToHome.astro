@@ -31,7 +31,14 @@ import { i18n } from "@i18n/translation";
 
 		const path = window.location.pathname.replace(/\/$/, "") || "/";
 		const homePath = homeUrl.replace(/\/$/, "") || "/";
-		if (path === homePath) {
+		const backToTopBtn = document.getElementById("back-to-top-btn");
+		const isBackToTopVisible = Boolean(
+			backToTopBtn && !backToTopBtn.classList.contains("hide"),
+		);
+
+		// 非主页且尚未滚动到“返回顶部”阈值时显示主页按钮。
+		// 滚动后由返回顶部按钮接替同一个悬浮位置。
+		if (path === homePath || isBackToTopVisible) {
 			btn.classList.add("hide");
 		} else {
 			btn.classList.remove("hide");
