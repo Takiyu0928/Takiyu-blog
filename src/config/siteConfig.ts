@@ -74,7 +74,9 @@ export const siteConfig: SiteConfig = {
 				"/assets/desktop-banner/p7.png",
 				"/assets/desktop-banner/p8.png",
 			],
-			mobile: [],
+			mobile: [
+				"/assets/mobile-banner/1788418737181-6.png",
+			],
 		},
 		position: "top",
 		carousel: {
