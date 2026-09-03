@@ -1,49 +1,46 @@
+Welcome to **TakiyuUI** — a personal space for writing, collecting ideas, sharing interests, and documenting the things that make everyday life memorable.
 
-This website is built with the **Astro** framework using the [Mizuki](https://github.com/LyraVoid/Mizuki) theme.
+::github{repo="Takiyu0928/Takiyu-blog"}
 
-::github{repo="LyraVoid/Mizuki"}
+## About TakiyuUI
 
-## 🌟 Theme Features
+TakiyuUI is the interface and identity of this blog. It combines a calm visual style with practical ways to explore articles, music, projects, media, and personal collections.
 
-### 🎨 Design & User Experience
-- **Modern & Elegant Design** - Clean, minimalist interface with beautiful typography
-- **Fully Responsive** - Optimized for all devices from mobile to desktop
-- **Dark/Light Mode** - Automatic theme switching with smooth transitions
-- **Beautiful Typography** - Enhanced readability with JetBrains Mono font
-- **Smooth Animations** - Fluid page transitions and interactive elements
+The site is designed to feel more like a small digital home than a conventional blog: every page is part of the same experience, while visitors are free to choose the theme, layout, and reading environment that suits them.
 
-### 🔍 Content & Search
-- **Advanced Search** - Powered by [Pagefind](https://pagefind.app/) for fast, accurate results
-- **Enhanced Markdown** - Extended syntax with code highlighting and math support
-- **Interactive Table of Contents** - Auto-scroll navigation for long articles
-- **RSS Feed Generation** - Stay updated with automatic feed generation
-- **Reading Time Estimation** - Know how long articles take to read
-- **Post Categorization** - Organize content with tags and categories
+## What You Can Explore
 
+### Writing and Collections
 
+- **Posts** — Long-form writing, notes, guides, and discoveries
+- **Archive** — All published articles organized by date, category, and tag
+- **Diary** — Shorter moments and everyday updates
+- **Albums** — Visual memories presented as curated collections
 
-### 📱 Special Pages
-- **Anime Tracking Page** - Track your anime watching progress with ratings
-- **Friends Links Page** - Showcase friend websites with beautiful cards
-- **Diary/Moments Page** - Share life moments like social media posts
-- **Archive Page** - Organized timeline view of all posts
-- **About Page** - Customizable personal introduction (this page!)
+### Interests and Personal Pages
 
-### 🛠 Technical Features
-- **Enhanced Code Blocks** - Powered by [Expressive Code](https://expressive-code.com/)
-- **Math Support** - LaTeX rendering with KaTeX for mathematical expressions
-- **Image Optimization** - PhotoSwipe gallery with lazy loading
-- **SEO Optimized** - Built-in sitemap and meta tags for better search visibility
-- **Performance Optimized** - Fast loading with caching and optimization
-- **Comment System Ready** - Integration support for Twikoo comments
+- **Anime** — Watching history, ratings, and personal favorites
+- **Devices** — The hardware and tools used behind the scenes
+- **Projects** — Selected experiments and things currently being built
+- **Skills** — A growing map of technologies and creative interests
+- **Timeline** — Important milestones collected in chronological order
 
-### 🎯 Advanced Markdown Features
-- **Callouts & Admonitions** - Beautiful info boxes with `> [!NOTE]`, `> [!TIP]`, `> [!WARNING]`
-- **Mathematical Equations** - Write LaTeX math with `$inline$` and `$$block$$` syntax
-- **GitHub Cards** - Embed repository cards with `::github{repo="user/repo"}`
-- **Syntax Highlighting** - Advanced code highlighting with line numbers
-- **Copy Code Buttons** - Easy code copying functionality
+## Designed Around the Reader
+
+TakiyuUI includes light and dark themes, adjustable accent colors, multiple wallpaper modes, responsive layouts, full-text search, an interactive table of contents, and a persistent music player.
+
+The interface also supports both English and Chinese. The language switcher changes navigation and interface text without interrupting the current page, making the site easier to explore for different readers.
+
+## Built with Open Source
+
+TakiyuUI is built with [Astro](https://astro.build/) and developed from the open-source [Mizuki](https://github.com/LyraVoid/Mizuki) theme. It also uses Svelte, TypeScript, Tailwind CSS, Pagefind, and other open-source tools.
+
+The project keeps the strong foundation of Mizuki while adding a distinct visual identity, custom navigation, local music, personal content pages, bilingual controls, and interface refinements created for this site.
+
+## Keep in Touch
+
+The source code and ongoing changes are available on [GitHub](https://github.com/Takiyu0928/Takiyu-blog). You can also find more personal updates through the social links in the navigation menu.
 
 ---
 
-*Built with ❤️ using Astro and inspired by modern web design principles.*
+*Designed, written, and maintained by Takiyu.*
