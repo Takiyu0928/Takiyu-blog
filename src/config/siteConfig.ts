@@ -69,7 +69,6 @@ export const siteConfig: SiteConfig = {
 	banner: {
 		src: {
 			desktop: [
-				"/assets/desktop-banner/p6.jpg",
 				"/assets/desktop-banner/p7.png",
 				"/assets/desktop-banner/p8.png",
 			],
