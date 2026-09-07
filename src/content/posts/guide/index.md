@@ -1,11 +1,13 @@
 ---
-title: Simple Guide to TakiyuUI
-published: 2024-04-01
-updated: 2026-09-03
+title: "Simple Guide to TakiyuUI"
+published: "2026-09-05"
+updated: "2026-09-03"
 description: "A practical introduction to writing, customizing, previewing, and publishing with TakiyuUI."
 image: "./cover.webp"
 tags: ["TakiyuUI", "Blogging", "Customization"]
-category: Guides
+category: "Guides"
+pinned: false
+priority: 0
 draft: false
 ---
 
