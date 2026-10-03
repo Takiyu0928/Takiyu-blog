@@ -1,6 +1,6 @@
 ---
 title: "Simple Guide to TakiyuUI"
-published: "2026-09-05"
+published: "2026-09-01"
 updated: "2026-09-03"
 description: "A practical introduction to writing, customizing, previewing, and publishing with TakiyuUI."
 image: "./cover.webp"
