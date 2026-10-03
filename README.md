@@ -1,5 +1,12 @@
 # Takiyu Blog
 
+[![Astro](https://img.shields.io/badge/Astro-7.1.3-FF5D01?logo=astro&logoColor=white)](https://astro.build/)
+[![Svelte](https://img.shields.io/badge/Svelte-5.56.7-FF3E00?logo=svelte&logoColor=white)](https://svelte.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3.3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Pagefind](https://img.shields.io/badge/Pagefind-1.5.2-4B5563)](https://pagefind.app/)
+[![pnpm](https://img.shields.io/badge/pnpm-11.5.3-F69220?logo=pnpm&logoColor=white)](https://pnpm.io/)
+
 基于 [Mizuki](https://github.com/LyraVoid/Mizuki) 深度自定义的个人博客，使用 Astro 构建并部署于 Vercel。
 
 > 在线访问：<https://takiyu-wiki.ccwu.cc/>
