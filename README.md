@@ -1,4 +1,4 @@
-# Takiyu Blog
+# Takiyu Blog <img src="./public/assets/home/wiki-icon.webp" alt="Takiyu Blog icon" width="40" height="40" />
 
 [![Astro](https://img.shields.io/badge/Astro-7.1.3-FF5D01?logo=astro&logoColor=white)](https://astro.build/)
 [![Svelte](https://img.shields.io/badge/Svelte-5.56.7-FF3E00?logo=svelte&logoColor=white)](https://svelte.dev/)
